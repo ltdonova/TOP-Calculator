@@ -4,12 +4,22 @@ html{
 
 .calculator{
     background-color: black;
-    width: 30%;
+    /* width: 24%; */
+    width: 300;
     height: 100%;
     margin: auto;
     border-radius: 25px;
+    
+}
+
+.inner{
     display: flex;
     flex-direction: column;
+    margin-left: 20;
+    margin-right: 20;
+    margin-bottom: 30;
+    height: 100%;
+
 }
 
 .display{
@@ -17,7 +27,11 @@ html{
 }
 
 .mid-bar{
-    height: 10%
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    margin: 0 21 7 21;
 }
 .mid-section{
     height: fit-content;
@@ -27,27 +41,87 @@ html{
     background-color: #212121;
     border-style: none;
     border: .7px solid #212121;
-    margin: 10 20 10 20;
+    /* margin: 10 20 10 20; */
 
 }
+
 
 .keypad{
     flex-grow: 1; /* default 0 */
     display: flex;
     flex-wrap: wrap;
-    margin-left: 20;
-    margin-right: 20;
+    justify-content: space-evenly;
+    margin-bottom: 10;
+    
 }
 
 .keypadButton{
     border-radius: 50%;
-
+    display: flex;
+    flex-direction: column;
     height: 50;
     width: 50;
     background-color: #1f1f1f;
-    margin: 5;
+    margin: 5 7 5 7;
+    text-align: center; 
+    justify-content: center;
+    color: white;
+    font-family: Tahoma ;
+    font-size: 18;
+    cursor: pointer;
+    user-select: none;
+
+}
+.keypadButton:active{
+    background-color: rgb(73, 73, 73);
+    font-size: 14;
+
 }
 
-.equals{
-    background-color: #427e04;
+
+.clear{
+    color:#df6a50;
 }
+.equals{
+    background-color: #509c04;
+    color: white;
+}
+.operator{
+    color:#aee277;
+}
+
+.timer{
+    font-size: 20px; 
+     /* color: #9f9f9f; */
+     color: #9f9f9f5d;
+     align-self: center;
+
+    height:21px;
+}
+
+.backspace{
+    font-size: 18px; 
+    color: #9ed1638c; 
+    /* color: #9dd163;  */
+    height:21px;
+    align-self: center;
+
+}
+
+.light-backspace{
+    color: #9dd163; 
+
+}
+/* .grey-circle{
+    user-select: none;
+}
+.grey-circle:active{
+    border-radius: 50%;
+    height: 25;
+    width: 25;
+    background-color: rgb(73, 73, 73);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+} */
