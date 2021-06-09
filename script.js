@@ -77,9 +77,14 @@ function backspace(){
     displayedInput.value = newInput;
 }
 
+function clear() {
+    displayedInput.value = "";
+}
+
 
 
 backspaceButton.addEventListener('click',backspace);
+buttons[0].addEventListener('click',clear);
 buttons[3].addEventListener('click',operatorCalled('divide'));
 buttons[7].addEventListener('click',operatorCalled('multiply'));
 buttons[11].addEventListener('click',operatorCalled('subtract'));
