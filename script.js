@@ -3,6 +3,8 @@ var displayString = "";
 var displayedInput = document.querySelector('.input-text');
 var buttons = document.querySelectorAll('.keypadButton');
 
+var backspaceButton = document.querySelectorAll('.grey-circle')[1];
+
 var op1;
 var op2;
 var operator;
@@ -68,12 +70,22 @@ function displayInput(){
 
 }
 
+function backspace(){
+    var input = displayedInput.value;
+    var length = input.length;
+    var newInput = input.substring(0,length-1);
+    displayedInput.value = newInput;
+}
+
+
+
+backspaceButton.addEventListener('click',backspace);
 buttons[3].addEventListener('click',operatorCalled('divide'));
 buttons[7].addEventListener('click',operatorCalled('multiply'));
 buttons[11].addEventListener('click',operatorCalled('subtract'));
 buttons[15].addEventListener('click',operatorCalled('add'));
 
-buttons[19].addEventListener('click',equals);
+buttons[17].addEventListener('click',equals);
 
 [...buttons].forEach(button => button.addEventListener('click',displayInput));
 
